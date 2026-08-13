@@ -24,6 +24,4 @@ if cur.fetchone()[0] == 0:
 cur.execute("SELECT title, link FROM articles LIMIT 20")
 for title, link in cur.fetchall():
     st.write(f"- [{title}]({link})")
-
-
-
+conn.close()
